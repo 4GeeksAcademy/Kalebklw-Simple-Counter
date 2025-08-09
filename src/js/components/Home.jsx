@@ -1,26 +1,32 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+// import Counter from "./Counter"
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-const Home = () => {
+
+const Home = ({time}) => {
+	const stringTime = time.toString()
+	console.log(stringTime + 1);
+	const digit1 = time < 10 ? stringTime[0] : stringTime[1]
+	const digit2 = time < 10 ? "" : stringTime[0]
+	// condition ? do this : do that
+	// 0
+	// 1
+	// 2
+	// 3
+	// 4
+	// 5
+	// 6
+	// 10
+	// 13
 	return (
 		<div className="text-center">
-            
-
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			
+			<span className="digit2 border bg-secondary p-3 m-2">
+				{digit2}
+			</span>
+           <span className="digit1 border bg-secondary p-3 m-2">
+				{digit1}
+			</span>
 		</div>
 	);
 };

@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+
 //Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap"
@@ -10,9 +11,20 @@ import '../styles/index.css'
 
 // components
 import Home from './components/Home';
+let seconds = 0;
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+
+  setInterval(() =>{
+    seconds = seconds + 1
+
+    ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home/>
+    <Home time = {seconds}/>
   </React.StrictMode>,
 )
+
+}
+  , 1000
+);
+
+
