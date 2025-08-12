@@ -11,7 +11,7 @@ import '../styles/index.css'
 
 // components
 import Home from './components/Home';
-let seconds = 990;
+let seconds = 0;
 
   setInterval(() =>{
     seconds = seconds + 1
