@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-solid-svg-icons'
+import './index.css'
 
 
 const Home = ({time}) => {
@@ -13,33 +14,40 @@ const Home = ({time}) => {
 	const digit1 = time % 10
 	
 	return (
-		<div className=" d-flex justify-content-center text-center bg-dark mt-5 mx-5" style={{height: "75px", borderRadius:"20px"}}>
+		// Main Body Of Clock
+		<div className="body d-flex justify-content-center text-center bg-dark mt-5 mx-5">
 			
-			<span className="digit4 bg-secondary p-3 m-2" style={{borderRadius:"10px"}}>
-			<FontAwesomeIcon className="fs-2" icon={faClock} style={{color: "white"}}/>
+			<span className="clockImgSpan digit4 bg-secondary p-3 m-2">
+				<FontAwesomeIcon className="clockIcon fs-2" icon={faClock}/>
 			</span>
 
-			<span className="digit4 bg-secondary p-3 m-2" id="tenthsPlace" style={{borderRadius:"10px"}}>
+			{/* Hundred Thousands Place */}
+			<span className="digit6 bg-secondary p-3 m-2">
 				{digit6}
 			</span>
 
-			<span className="digit4 bg-secondary p-3 m-2" id="tenthsPlace" style={{borderRadius:"10px"}}>
+			{/* Ten Thousands Place */}
+			<span className="digit5 bg-secondary p-3 m-2">
 				{digit5}
 			</span>
 
-			<span className="digit4 bg-secondary p-3 m-2" id="tenthsPlace" style={{borderRadius:"10px"}}>
+			{/* Thousands Place */}
+			<span className="digit5 bg-secondary p-3 m-2">
 				{digit4}
 			</span>
 			
-			<span className="digit3 bg-secondary p-3 m-2" id="tenthsPlace" style={{borderRadius:"10px"}}>
+			{/* Hundreds Place */}
+			<span className="digit3 bg-secondary p-3 m-2">
 				{digit3}
 			</span>
 			
-			<span className="digit2 bg-secondary p-3 m-2" id="tenthsPlace" style={{borderRadius:"10px"}}>
+			{/* Tenths Place */}
+			<span className="digit2 bg-secondary p-3 m-2">
 				{digit2}
 			</span>
            	
-			<span className="digit1 bg-secondary p-3 m-2" id="onesPlace" style={{borderRadius:"10px"}}>
+			{/* Ones Place */}
+			<span className="digit1 bg-secondary p-3 m-2">
 				{digit1}
 			</span>
 		</div>
